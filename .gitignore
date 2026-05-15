@@ -1,0 +1,14 @@
+# If you push this repo to a public remote, uncomment these lines to keep
+# your personal career data out of git. For a private repo, leave them in.
+
+# profile/*
+# !profile/.gitkeep
+# applications/*
+# !applications/.gitkeep
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

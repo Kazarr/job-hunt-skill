@@ -115,8 +115,11 @@ End `fit-analysis.md` with a verdict block:
 - Why: <one paragraph>
 - If applying, lead with: <user's 2-3 strongest assets for this role>
 - If applying, address head-on: <the gap(s) that need a frame>
+- Questions to clarify in recruiter screen: <unspecified comp range, unspecified contract type (B2B vs employment), unstated on-call expectations, location/visa specifics, anything else the posting was vague on>
 - Cross-application note: <if a pattern surfaced in step 4, what it means here>
 ```
+
+**Always include vague-comp as a clarifier.** If the posting says "competitive", "based on experience", "depending on profile", or simply doesn't list a range, this is a question for the first recruiter call — list it explicitly in the verdict and surface it in chat. Reason: comp is the most common late-stage process-killer; not knowing the band before investing in interviews costs the user time.
 
 Share the verdict in chat. If "Skip", explain the reasoning so the user can override — they may have context you don't (a referral, a strategic reason to try, knowledge that a "hard" requirement is actually soft for them).
 

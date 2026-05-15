@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "query": "Got this job posting from a recruiter friend and I'm not sure if it's worth chasing. It's for a Senior Backend Engineer at a Series B fintech in Berlin. Stack is Go + Postgres + Kafka, must-have is 5+ years on distributed systems, salary band 90-110k EUR. I have 6y Go but no Kafka in production yet. Should I throw my hat in?",
+    "should_trigger": true,
+    "category": "should-trigger: posting paste with fit question"
+  },
+  {
+    "id": 2,
+    "query": "a recruiter at deel just emailed me about a remote senior platform engineering role. they want a 30-min call this thursday but also asking for my 'comp expectations' in the reply. how do I not lock myself into a number?",
+    "should_trigger": true,
+    "category": "should-trigger: recruiter email + comp question"
+  },
+  {
+    "id": 3,
+    "query": "I have a 4-hour take-home for a senior frontend role tomorrow. They want me to build an Airbnb-style search results page with infinite scroll and filters in React. They said 'use AI tools if you want'. How do I approach this without over-investing?",
+    "should_trigger": true,
+    "category": "should-trigger: take-home strategy"
+  },
+  {
+    "id": 4,
+    "query": "Got an offer from Mercury — 165k base, 0.05% equity over 4 years, $5k sign-on. They're at 1500 employees. Is this competitive and what should I push back on? I'm in NYC, currently making 140k base at a smaller startup.",
+    "should_trigger": true,
+    "category": "should-trigger: offer negotiation"
+  },
+  {
+    "id": 5,
+    "query": "Final round interview at Datadog next week — senior SRE role. They told me to expect 'systems design + on-call scenarios + values'. I've shipped k8s in production but never been formally on-call. How do I frame that without bombing?",
+    "should_trigger": true,
+    "category": "should-trigger: interview prep with gap"
+  },
+  {
+    "id": 6,
+    "query": "this posting feels off to me — small startup, salary not listed, says 'fast-paced family environment', wants exclusivity for the search, and they're asking for 4 references before the first interview. red flag check?",
+    "should_trigger": true,
+    "category": "should-trigger: red-flag analysis"
+  },
+  {
+    "id": 7,
+    "query": "I've been applying to senior backend roles for 3 months and got 2 callbacks out of 40 applications. I think my CV might be the problem — last updated 2022, mostly bullet points like 'worked on backend services'. Help?",
+    "should_trigger": true,
+    "category": "should-trigger: CV improvement"
+  },
+  {
+    "id": 8,
+    "query": "The hiring manager at Shopify asked me 'what salary range are you targeting' in an email after the first call. I want to reply but every number I throw out feels like it locks me in. What do I write?",
+    "should_trigger": true,
+    "category": "should-trigger: comp negotiation pre-offer (subtle phrasing)"
+  },
+  {
+    "id": 9,
+    "query": "I'm a hiring manager at a small startup and I need to write a job description for a senior backend engineer position. We're a 30-person team, Rust + Postgres, remote-first. What should I include?",
+    "should_trigger": false,
+    "category": "should-not-trigger: hiring side (job description for OWN open role)"
+  },
+  {
+    "id": 10,
+    "query": "My current employer promised me a 15% raise in Q4 and now they're back-pedaling because of the budget. I have a performance review next month. How should I approach this conversation with my manager?",
+    "should_trigger": false,
+    "category": "should-not-trigger: raise negotiation at current job (not job-hunt)"
+  },
+  {
+    "id": 11,
+    "query": "Help me write a strong LinkedIn 'About' section that gets me noticed by recruiters. I'm a senior backend engineer with 8 years experience, mostly Python and AWS.",
+    "should_trigger": false,
+    "category": "should-not-trigger: LinkedIn profile optimization (out of skill scope, adjacent)"
+  },
+  {
+    "id": 12,
+    "query": "I'm thinking about switching from backend to ML engineering. I've been doing Python backend for 7 years but ML is more interesting. What's a realistic path — should I do a bootcamp, contribute to open source, or just apply and see what sticks?",
+    "should_trigger": false,
+    "category": "should-not-trigger: career direction / pivot planning (no specific opportunity)"
+  },
+  {
+    "id": 13,
+    "query": "I just got promoted at my current company to staff engineer. They bumped me 8%. I think that's low. Should I push back or accept?",
+    "should_trigger": false,
+    "category": "should-not-trigger: internal promotion negotiation, not external job hunt"
+  },
+  {
+    "id": 14,
+    "query": "Tomorrow I have an interview with an internal candidate for the staff role on my team. I'm on the panel. What questions should I ask to evaluate technical leadership?",
+    "should_trigger": false,
+    "category": "should-not-trigger: user is the interviewer, not the candidate"
+  }
+]

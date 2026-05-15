@@ -6,6 +6,9 @@
 # applications/*
 # !applications/.gitkeep
 
+# Build artifacts
+dist/
+
 # OS / editor noise
 .DS_Store
 Thumbs.db

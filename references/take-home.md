@@ -226,12 +226,38 @@ Recognize the domain of the take-home and check for the standard pitfalls.
 
 ### Payments / cart / checkout
 - **Card data should never touch your backend in production.** Use tokenization (Stripe Elements, Adyen Drop-in, etc.). For a take-home with a card form, plain inputs are fine, but call this out in the README: *"In production I would integrate Stripe Elements / equivalent so card input stays in a sandboxed iframe and our servers only ever see a token. This keeps the system outside PCI DSS scope for cardholder data."*
-- Luhn algorithm for card number validation (5 lines or one library call)
-- Expiry not in the past
-- Disable submit until form valid
-- Loading state on submit
 - Idempotency on the order-creation endpoint
 - Show the user what they're being charged before they click
+
+**Card form — checklist of senior signals to ship (every item is small, every item is judged).**
+
+Validation logic:
+- [ ] Luhn algorithm on card number (10–15 lines, pure function, unit-testable)
+- [ ] Expiry MM/YY parse + reject past dates + reject month > 12
+- [ ] CVV length matches brand (3 normally, 4 for Amex)
+- [ ] Disable submit until form valid
+- [ ] Loading / disabled state on submit while in flight
+
+HTML attributes (these are the "real-world senior" tells — recruiters scan for them):
+- [ ] `autocomplete="cc-number"` on the card number input
+- [ ] `autocomplete="cc-name"` on the cardholder name
+- [ ] `autocomplete="cc-exp"` on the expiry
+- [ ] `autocomplete="cc-csc"` on the CVV
+- [ ] `inputmode="numeric"` on numeric fields (card number, expiry, CVV) — surfaces the numeric mobile keyboard
+- [ ] No `autocomplete` on the CVV beyond `cc-csc` — never persist
+- [ ] Don't mask the card number with `type="password"` — the user wants to see what they typed
+
+Accessibility (basic table stakes):
+- [ ] Real `<label for=>` for every input (no placeholder-as-label)
+- [ ] Inline error messages with `aria-describedby` linking input → error
+- [ ] Errors announced via `aria-live="polite"` region
+
+Security hygiene:
+- [ ] Never log card numbers / CVV (search the code before submitting)
+- [ ] Never persist card data to localStorage / sessionStorage / state stores
+- [ ] HTTPS only (default in production; mention in README if local dev is HTTP)
+
+Mention this list in the README's "Architectural decisions" section to make clear it was deliberate.
 
 ### Auth
 - Never log passwords or tokens

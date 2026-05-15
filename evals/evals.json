@@ -1,0 +1,61 @@
+{
+  "skill_name": "job-hunt",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "fit-analysis-with-context",
+      "prompt": "Hey — between roles right now, senior FE dev (Angular, 7y, NgRx, strict TS, EU/Slovakia, prefer B2B contracts). Just got this posting forwarded by a friend. Worth applying?\n\n---\n\nSenior Frontend Engineer @ ViaBill (Copenhagen, fully remote EU)\n\nAbout us: BNPL fintech, $150M+ annual transactions, backed by Headline and BlackFin Capital Partners.\n\nStack: Angular 20+, NgRx, TypeScript strict, Jest. Node.js/Express backend, AWS.\n\nYou will:\n- Build and ship customer-facing features in the BNPL flow\n- Own pieces of the frontend architecture and contribute to backend services\n- Pair with product to shape features, not just implement them\n- Take part in on-call rotation for the platform\n\nWe want:\n- 5+ years frontend, senior Angular (signals, standalone, strict TS)\n- Hands-on Node.js / Express experience for backend collaboration — must-have\n- Comfortable with AWS\n- Production on-call experience\n\nBonus: experience with payments / BNPL, NgRx SignalStore, modern AI-assisted dev workflows.\n\nCompensation: competitive, depending on experience.\n---\n\nwhat do you think?",
+      "expected_output": "Fit analysis with a clear verdict, identifies Node/Express as hard gap, asks for CV, writes posting.md + fit-analysis.md.",
+      "assertions": [
+        {"text": "Identifies Node.js/Express as the binding hard-requirement gap"},
+        {"text": "Recognizes senior Angular + NgRx + strict TS as strong matches"},
+        {"text": "Calls out on-call expectation and probes user fit for it"},
+        {"text": "Notes the missing compensation range as something to clarify in screen"},
+        {"text": "Surfaces user-strength bonus matches (Signals / NgRx / AI workflows)"},
+        {"text": "Produces an explicit verdict (Apply / Apply with caveats / Skip)"},
+        {"text": "If applying, gives specific advice for framing the Node gap"},
+        {"text": "Asks for the user's CV OR runs an onboarding flow because no profile exists"},
+        {"text": "Saves the posting verbatim to a file in applications/<slug>/posting.md"},
+        {"text": "Saves a fit analysis to a file in applications/<slug>/fit-analysis.md"},
+        {"text": "Final chat response stays under ~600 words (concision)"}
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "recruiter-reply-rate-protected",
+      "prompt": "a recruiter just emailed me about a contractor role. need to reply soon but don't want to commit to a rate before I even talked to anyone. here's the email — help me draft something?\n\n'Hi Matej,\n\nReaching out about a Senior Frontend Engineer role with one of our clients (large Slovak fintech, can't disclose yet). 6-month initial contract, remote with one day/week in Bratislava.\n\nBudget is 250-300 EUR/day. We'd be proposing 275. Can you confirm you're happy with this range and send your CV by EOD?\n\nAlso — given the speed they want to move, we'd need exclusive representation for this client. Client wants to interview Monday.\n\nBest, Ronnie\nWave Talent'",
+      "expected_output": "Drafted reply that doesn't commit on 275, scopes exclusivity, sends CV, concise, no filler softeners.",
+      "assertions": [
+        {"text": "Drafted reply does NOT confirm or accept the 275 EUR/day rate"},
+        {"text": "Drafted reply addresses exclusivity by scoping to this specific client/opportunity rather than blanket"},
+        {"text": "Drafted reply mentions sending CV"},
+        {"text": "Drafted reply does NOT contain filler softeners (e.g. 'happy to wait', 'no rush', 'whenever convenient', 'at your earliest convenience')"},
+        {"text": "Drafted reply is concise (under ~150 words)"},
+        {"text": "Parses the incoming email structurally before drafting (extracts client info, budget, exclusivity ask, urgency)"},
+        {"text": "Notes the rate-anchor-low pattern (recruiter proposing 275 from a 250-300 range)"},
+        {"text": "Provides explanation/coaching to the user about why the specific deflection wording works"},
+        {"text": "Output is in English (matching user's input language)"}
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "eval_name": "take-home-strategy-payment-form",
+      "prompt": "Got a take-home for a senior FE role at Hospitable.com (Airbnb host SaaS). 2.5 hours, build a cart + checkout flow with a credit card form, Angular + NgRx required. They explicitly said 'use AI tools as you would normally'. How should I approach this — particularly the card form part, given they're a fintech-ish company?",
+      "expected_output": "Strategy with time allocation, AI usage discipline, README requirements, card form specifics + PCI tokenization callout, saves to take-home.md.",
+      "assertions": [
+        {"text": "Mentions PCI / tokenization / Stripe Elements (or equivalent SDK) for production card handling"},
+        {"text": "Provides explicit time allocation across phases (plan / scaffold / core / polish / submit)"},
+        {"text": "Names specific senior signals for the card form (Luhn validation, expiry check, autocomplete attrs, inputmode)"},
+        {"text": "Addresses AI usage discipline beyond 'just use AI' (e.g. 'you direct, AI implements' or what to delegate vs own)"},
+        {"text": "Specifies README content with named sections (architectural decisions, AI usage log, trade-offs, setup)"},
+        {"text": "Addresses testing philosophy that avoids trivial tests (e.g. tests on real logic, not boilerplate)"},
+        {"text": "Saves take-home strategy notes to applications/<slug>/take-home.md"},
+        {"text": "Reads the prompt as evaluating senior signals (not just 'build feature X')"},
+        {"text": "Final chat response is structured (lists / sections), not a wall of prose"}
+      ],
+      "files": []
+    }
+  ]
+}
